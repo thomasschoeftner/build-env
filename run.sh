@@ -1,5 +1,9 @@
 #!/bin/bash
-### usage: build -s <source-folder> -b <build-container>
+### usage:   ./run.sh -b <build-container> -s <source-code-folder>
+### examples:
+###   ./run.sh -b build-go:1.8.3     -s /user/hugo/sources
+###   ./run.sh -b build-jvm:8        -s /user/hugo/sources
+###   ./run.sh -b build-rust:1.19.0  -s /user/hugo/sources
 
 while getopts s:b: option
 do
