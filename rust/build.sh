@@ -1,0 +1,9 @@
+#!/bin/bash
+
+TECHNOLOGY=rust
+CONTAINERNAME=build-${TECHNOLOGY}
+RUST_VERSION=1.19.0
+echo Creating Build-Container ${CONTAINERNAME}:${RUST_VERSION}
+
+docker build -t ${CONTAINERNAME}:${RUST_VERSION} --build-arg RUST_VERSION=${RUST_VERSION} .
+
